@@ -8,4 +8,5 @@ public class Logger {
         throw new CommandException("Command already exists");
     }
 
+
 }

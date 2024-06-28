@@ -17,6 +17,11 @@ import java.util.jar.JarFile;
 @UtilityClass
 public class ClassUtil {
 
+    /**
+     * Check if a class exists
+     * @param className the class name
+     * @return true if the class exists
+     */
     public boolean classExists(@NotNull String className) {
         try {
             Class.forName(className);
@@ -26,6 +31,12 @@ public class ClassUtil {
         }
     }
 
+    /**
+     * Get classes in a package
+     * @param clazz the class
+     * @param packageName the package name
+     * @return the classes
+     */
     @NotNull
     public List<Class<?>> getClassesInPackage(@NotNull Class<?> clazz, @NotNull String packageName) {
         List<Class<?>> classes = new ArrayList<>();
@@ -61,6 +72,11 @@ public class ClassUtil {
         return classes;
     }
 
+    /**
+     * Get the generic or raw type of a parameter
+     * @param parameter the parameter
+     * @return the generic or raw type
+     */
     public Class<?> getGenericOrRawType(Parameter parameter) {
         Type type = parameter.getParameterizedType();
         if (type instanceof ParameterizedType) {

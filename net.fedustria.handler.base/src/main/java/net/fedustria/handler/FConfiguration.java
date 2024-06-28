@@ -17,8 +17,8 @@ public class FConfiguration {
     FScope scope;
 
     /**
-     * @param instance
-     * @param scope
+     * @param instance the instance
+     * @param scope the scope
      */
     public FConfiguration(Object instance, FScope scope) {
         this.instance = instance;
@@ -52,7 +52,6 @@ public class FConfiguration {
      * @return the instance
      */
     public FConfiguration build() throws FHandlerException {
-
         validate();
 
         return new FConfiguration(instance, scope);
@@ -65,6 +64,9 @@ public class FConfiguration {
         return new CommandRegistrar(scope, instance);
     }
 
+    /**
+     * @throws FHandlerException if the instance is null
+     */
     private void validate() throws FHandlerException {
         if (instance == null) {
             throw new FHandlerException("Instance cannot be null. Please set the instance before building the configuration.");

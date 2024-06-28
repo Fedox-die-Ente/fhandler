@@ -32,5 +32,9 @@ public class TestCommand {
         Bukkit.broadcastMessage("Test command executed!");
     }
 
+    @Command("test subcommand subcommand2")
+    public void subcommandSubcommand2(@Sender CommandSender sender) {
+        sender.sendMessage("Subcommand 2 executed!");
+    }
 
 }
