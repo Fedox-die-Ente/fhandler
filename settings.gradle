@@ -1,0 +1,9 @@
+rootProject.name = 'FedustriaHandler'
+include 'net.fedustria.fhandler.base'
+include 'net.fedustria.fhandler.bungeecord'
+include 'net.fedustria.handler.instance'
+include 'net.fedustria.handler.base'
+include 'net.fedustria.handler.bungeecord'
+include 'net.fedustria.handler.test'
+include 'net.fedustria.handler.logger'
+
